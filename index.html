@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Company Work Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    :root {
+      --bg: #f4f6f8;
+      --card: #ffffff;
+      --primary: #1f3a5f;
+      --accent: #0078d4;
+      --text: #1a1a1a;
+      --muted: #666;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      display: none; /* hide content until password verified */
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    header p {
+      margin-top: .5rem;
+      opacity: .9;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: grid;
+      gap: 2rem;
+    }
+
+    section {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,.06);
+    }
+
+    section h2 {
+      margin-top: 0;
+      border-bottom: 2px solid var(--bg);
+      padding-bottom: .5rem;
+      font-size: 1.4rem;
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    a.card {
+      display: block;
+      padding: 1rem;
+      border-radius: 10px;
+      text-decoration: none;
+      background: var(--bg);
+      color: var(--text);
+      transition: transform .1s ease, box-shadow .1s ease;
+    }
+
+    a.card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(0,0,0,.12);
+    }
+
+    a.card strong {
+      display: block;
+      font-size: 1.05rem;
+      margin-bottom: .25rem;
+    }
+
+    a.card span {
+      font-size: .9rem;
+      color: var(--muted);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size:
