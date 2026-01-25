@@ -9,22 +9,6 @@
     html { display: none !important; }
   </style>
 
-  <script>
-    // 2. PASSWORD CHECK
-    const password = prompt("Enter the company password:");
-
-    if (password === "Kias4199") {
-      // If correct, remove the "Hide" style block immediately
-      document.documentElement.style.display = "block";
-      const styleTag = document.getElementById('anti-flash');
-      if (styleTag) styleTag.remove();
-    } else {
-      // If wrong, send them away
-      alert("Access Denied.");
-      window.location.href = "https://www.google.com";
-    }
-  </script>
-
   <style>
     /* 3. YOUR VISUAL STYLES */
     :root {
