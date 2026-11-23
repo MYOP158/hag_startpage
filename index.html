@@ -5,8 +5,27 @@
   <title>Company Work Portal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- 1. IMMEDIATE HIDE: Prevents the page from flashing before password check -->
+  <style id="anti-flash">
+    html { display: none !important; }
+  </style>
+
+  <script>
+    // 2. PASSWORD CHECK
+    const password = prompt("Enter the company password:");
+
+    if (password === "YourPassword123") {
+      document.documentElement.style.display = "block";
+      const styleTag = document.getElementById('anti-flash');
+      if (styleTag) styleTag.remove();
+    } else {
+      alert("Access Denied.");
+      window.location.href = "https://www.google.com";
+    }
+  </script>
+
   <style>
-    /* 3. YOUR VISUAL STYLES */
+    /* 3. VISUAL STYLES */
     :root {
       --bg: #f4f6f8;
       --card: #ffffff;
@@ -85,10 +104,6 @@
         <strong>Selbyville Holly Kia</strong>
         <span>Jim wants to see ya' in a Holly Kia!</span>
       </a>
-      <a class="card" href="https://selbyvillehollymitsubishi.com" target="_blank">
-        <strong>Selbyville Holly Mitsubishi</strong>
-        <span>Jim wants to see ya' in a Holly Mitsubishi!</span>
-      </a>
     </div>
   </section>
 
@@ -121,23 +136,15 @@
         <strong>K-Dealer+ Portal</strong>
         <span>Manufacturer resources & Kia University</span>
       </a>
-      <a class="card" href="https://mdl.login.mmsa.com/" target="_blank">
-        <strong>Mitsubishi Dealer Login</strong>
-        <span>Mitsubishi dealer resources, support, and training.</span>
-      </a>
     </div>
   </section>
 
   <section>
     <h2>Payroll & HR</h2>
     <div class="links">
-      <a class="card" href="https://online.adp.com/signin/v1/?APPID=ADPTA&productId=80e309c3-70d9-bae1-e053-3505430b5495&returnURL=https://time.adp.com&callingAppId=ADPTA" target="_blank">
-        <strong>ADP Time & Attendance</strong>
-        <span>Payroll, timecards, pay stubs</span>
-      </a>
-      <a class="card" href="https://online.adp.com/signin/v1/?APPID=401K&productId=80e309c3-7091-bae1-e053-3505430b5495-1&returnURL=https://mykplan.adp.com/SecureRetirementRouting/login.aspx&callingAppId=401K" target="_blank">
-        <strong>Benefits Portal</strong>
-        <span>Retirement and benefits information.</span>
+      <a class="card" href="https://login.flex.paychex.com/" target="_blank">
+        <strong>Paychex Flex</strong>
+        <span>Payroll, timecards, pay stubs, and benefits</span>
       </a>
     </div>
   </section>
