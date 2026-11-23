@@ -5,27 +5,7 @@
   <title>Company Work Portal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- 1. IMMEDIATE HIDE: Prevents the page from flashing before password check -->
-  <style id="anti-flash">
-    html { display: none !important; }
-  </style>
-
-  <script>
-    // 2. PASSWORD CHECK
-    const password = prompt("Enter the company password:");
-
-    if (password === "YourPassword123") {
-      document.documentElement.style.display = "block";
-      const styleTag = document.getElementById('anti-flash');
-      if (styleTag) styleTag.remove();
-    } else {
-      alert("Access Denied.");
-      window.location.href = "https://www.google.com";
-    }
-  </script>
-
   <style>
-    /* 3. VISUAL STYLES */
     :root {
       --bg: #f4f6f8;
       --card: #ffffff;
